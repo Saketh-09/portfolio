@@ -7,7 +7,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {Link} from 'react-router-dom'
 
 const pages = [{name:'Home',url:'/'},
-    {name:'Resume', url:'/resume'}];
+    {name:'Resume', url:'/resume'},{name:'Education', url:'/education'}];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -25,23 +25,6 @@ function ResponsiveAppBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: '#000',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -69,46 +52,28 @@ function ResponsiveAppBar() {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: { xs: 'block', md: 'none', textDecoration: 'none' },
                             }}
                         >
                             {pages.map((page) => (
-                                <Link to={page.url}>
+                                <Link to={page.url} sx={{textDecoration: 'none'}}>
                                     <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page.name}</Typography>
+                                        <Typography textAlign="center" sx={{textDecoration: "none"}}>{page.name}</Typography>
                                     </MenuItem>
                                 </Link>
                             ))}
                         </Menu>
                     </Box>
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: '#000',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={page.url}>
+                            <Link to={page.url} style={{textDecoration: 'none'}}>
                                 <Button
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: '#000', display: 'block' }}
-                                >
-                                    {page.name}
+                                    sx={{ my: 2, color: '#000', display: 'block'}}>
+                                    <Typography>{page.name}</Typography>
                                 </Button>
                             </Link>
                         ))}

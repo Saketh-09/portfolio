@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import Navbar from './components/header/navbar';
 import Resume from "./components/resume/resume";
 import Home from "./components/home/home";
+import Education from './components/education/education'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -16,6 +17,7 @@ function App() {
         <Routes>
             <Route path='/' element={<Home/>}></Route>
             <Route path='/resume' element={<Resume/>}></Route>
+            <Route path='/education' element={<Education/>}></Route>
         </Routes>
     </div>
   );
