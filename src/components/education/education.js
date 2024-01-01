@@ -11,23 +11,22 @@ export default function Education() {
         <div id="education" style={{margin: '2em'}}>
             <CssBaseline />
             <Container maxWidth="lg" >
-                <Typography variant='h3' className={styles.education}>Education</Typography>
+                <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Education</Typography>
                 <Box sx={{borderRadius: 1, borderBlockColor: grey}}>
                     <Grid container spacing={2}>
                         <Grid item xs={2}>
                             <Paper elevation={0}>
-                                <img src='/assets/utdLogo.png' alt='utd logo' className={styles.logo}/>
+                                <img src='/assets/utdLogo3.png' alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item xs={10}>
                             <Paper elevation={0} sx={{marginLeft: '3em'}}>
-                                <Typography variant='h6' className={styles.education}>{education.UTD}</Typography>
+                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{education.UTD}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.UTD}</Typography>
-                                <Typography variant='h6' className={styles.course}>{course.UTD}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{course.UTD}</Typography>
                                 <Typography className={styles.dates} variant='caption' display="block">{dates.UTD}</Typography>
-                                <Typography variant='h6' className={styles.cgpa}>CGPA: {cgpa.UTD}</Typography>
-                                <Typography className={styles.course}>{additional.UTD}</Typography>
-                                <br/>
+                                <Typography variant='h6' className={styles.cgpa} sx={{fontWeight:300}}>CGPA: {cgpa.UTD}</Typography>
+                                <Typography className={styles.course} sx={{fontWeight:300}}>{additional.UTD}</Typography>
                             </Paper>
                         </Grid>
                     </Grid>
@@ -44,11 +43,11 @@ export default function Education() {
                         </Grid>
                         <Grid item xs={10} >
                             <Paper elevation={0} sx={{marginLeft: '3em'}}>
-                                <Typography variant='h6' className={styles.education}>{education.IITH}</Typography>
+                                <Typography variant='h6' className={styles.education} sx={{fontWeight:350}}>{education.IITH}</Typography>
                                 <Typography variant='caption' display="block" className={styles.location}>{location.IITH}</Typography>
-                                <Typography variant='h6' className={styles.course}>{course.IITH}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{course.IITH}</Typography>
                                 <Typography className={styles.dates} variant='caption' display="block" >{dates.IITH}</Typography>
-                                <Typography variant='h6' className={styles.cgpa}>CGPA: {cgpa.IITH}</Typography>
+                                <Typography variant='h6' className={styles.cgpa} sx={{fontWeight:300}}>CGPA: {cgpa.IITH}</Typography>
                                 <Typography className={styles.course}>{additional.IITH}</Typography>
                             </Paper>
                         </Grid>

@@ -1,5 +1,6 @@
 .education{
     text-align: left;
+    font-weight: 300;
 }
 
 .course,.cgpa{
@@ -28,6 +29,6 @@
 .hr {
     border: 0; /* Remove the default border */
     height: 2px; /* Set the height of the line */
-    background: #8224b087; /* Use a gradient for a stylish effect */
+    background: rgb(198 185 202 / 54%); /* Use a gradient for a stylish effect */
     margin: 20px 0; /* Add some margin for spacing */
 }

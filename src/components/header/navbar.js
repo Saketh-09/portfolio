@@ -5,9 +5,11 @@ import {AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Container,
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import {Link} from 'react-router-dom'
+import {resumeURL} from "./navData";
 
-const pages = [{name:'Home',url:'/'},
-    {name:'Resume', url:'/resume'},{name:'Education', url:'/education'}];
+const pages = [{name:'Home',url:'/portfolio/'},
+    {name:'Education', url:'/portfolio/education'},
+    ,{name:'Experience', url:'/portfolio/experience'}];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -21,7 +23,7 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" sx={{ bgcolor: "#fff", boxShadow: 0 }}>
+    <AppBar sx={{ bgcolor: "#fff", boxShadow: 0, position: 'sticky' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -77,6 +79,12 @@ function ResponsiveAppBar() {
                                 </Button>
                             </Link>
                         ))}
+                        <Link to={resumeURL} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: '#000', display: 'block'}}>
+                                <Typography>Resume</Typography>
+                            </Button></Link>
                     </Box>
                 </Toolbar>
             </Container>

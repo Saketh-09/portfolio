@@ -1,0 +1,33 @@
+.education{
+    text-align: left;
+}
+
+.course,.cgpa{
+    font-size: large;
+    text-align: left;
+}
+
+.location, .dates{
+    font-size: small;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.logo{
+    margin: 2em;
+    width: 100%;
+    height: auto;
+}
+
+.heading{
+    font-size: xx-large;
+    letter-spacing: 3px;
+    text-align: left;}
+
+.hr {
+    border: 0; /* Remove the default border */
+    height: 2px; /* Set the height of the line */
+    background: rgb(198 185 202 / 54%); /* Use a gradient for a stylish effect */
+    margin: 20px 0; /* Add some margin for spacing */
+}

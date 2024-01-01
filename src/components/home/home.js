@@ -24,6 +24,7 @@ export default function Home(){
                         </Grid>
                         <Grid item xs={6} >
                             <Paper elevation={0}>
+                                <img src='/assets/pic.jpg' className={styles.pic}/>
                             </Paper>
                         </Grid>
                     </Grid>

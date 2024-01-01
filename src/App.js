@@ -10,14 +10,17 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import React from "react";
+import Experience from "./components/experience/experience";
+import CssBaseline from "@mui/material/CssBaseline";
 function App() {
   return (
     <div className="App">
+        <CssBaseline />
         <Navbar />
         <Routes>
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/resume' element={<Resume/>}></Route>
-            <Route path='/education' element={<Education/>}></Route>
+                <Route path='/portfolio/' element={<Home/>}></Route>
+                <Route path='/portfolio/education' element={<Education/>}></Route>
+                <Route path='/portfolio/experience' element={<Experience/>}></Route>
         </Routes>
     </div>
   );
