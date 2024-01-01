@@ -16,7 +16,7 @@ export default function Education() {
                     <Grid container spacing={2}>
                         <Grid item xs={2}>
                             <Paper elevation={0}>
-                                <img src='/assets/utdLogo3.png' alt='utd logo' className={styles.logo}/>
+                                <img src={process.env.PUBLIC_URL +'/assets/utdLogo3.png'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item xs={10}>
@@ -38,7 +38,7 @@ export default function Education() {
                     <Grid container spacing={2}>
                         <Grid item xs={2} >
                             <Paper elevation={0}>
-                                <img src='/assets/iithLogo.png' alt='utd logo' className={styles.logo}/>
+                                <img src={process.env.PUBLIC_URL +'/assets/iithLogo.png'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item xs={10} >

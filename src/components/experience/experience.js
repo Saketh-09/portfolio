@@ -34,7 +34,7 @@ export default function Experience() {
                     <Grid container spacing={2}>
                         <Grid item xs={2}>
                             <Paper elevation={0}>
-                                <img src='/assets/beehyvLogo.svg' alt='utd logo' className={styles.logo}/>
+                                <img src={process.env.PUBLIC_URL +'/assets/beehyvLogo.svg'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item xs={10}>
@@ -56,7 +56,7 @@ export default function Experience() {
                     <Grid container spacing={2}>
                         <Grid item xs={2} >
                             <Paper elevation={0}>
-                                <img src='/assets/newageitLogo.jpeg' alt='utd logo' className={styles.logo}/>
+                                <img src={process.env.PUBLIC_URL +'/assets/newageitLogo.jpeg'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item xs={10} >
