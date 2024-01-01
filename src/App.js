@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes, Route} from "react-router-dom";
 import Navbar from './components/header/navbar';
-import Resume from "./components/resume/resume";
 import Home from "./components/home/home";
 import Education from './components/education/education'
 import '@fontsource/roboto/300.css';

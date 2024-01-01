@@ -6,10 +6,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import {Link} from 'react-router-dom'
 import {resumeURL} from "./navData";
+import styles from './navbar.module.css';
 
 const pages = [{name:'Home',url:'/portfolio/'},
     {name:'Education', url:'/portfolio/education'},
-    ,{name:'Experience', url:'/portfolio/experience'}];
+    {name:'Experience', url:'/portfolio/experience'}];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -60,7 +61,7 @@ function ResponsiveAppBar() {
                             {pages.map((page) => (
                                 <Link to={page.url} sx={{textDecoration: 'none'}}>
                                     <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center" sx={{textDecoration: "none"}}>{page.name}</Typography>
+                                        <Typography textAlign="center"  sx={{textDecoration: "none"}}>{page.name}</Typography>
                                     </MenuItem>
                                 </Link>
                             ))}
@@ -74,16 +75,16 @@ function ResponsiveAppBar() {
                                 <Button
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: '#000', display: 'block'}}>
-                                    <Typography>{page.name}</Typography>
+                                    sx={{ m: 2, color: '#000', display: 'block'}}>
+                                    <Typography variant='h6' sx={{fontWeight: 300}}>{page.name}</Typography>
                                 </Button>
                             </Link>
                         ))}
                         <Link to={resumeURL} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                             <Button
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: '#000', display: 'block'}}>
-                                <Typography>Resume</Typography>
+                                sx={{ m: 2, color: '#000', display: 'block'}}>
+                                <Typography variant='h6' className={styles.section}>Resume</Typography>
                             </Button></Link>
                     </Box>
                 </Toolbar>

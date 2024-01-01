@@ -4,11 +4,17 @@
 
 .body{
     margin: 4em;
+
 }
 
 .pic{
-    margin: 2em;
-    width: 100%;
+    margin-left: 1em;
+    margin-top: 5em;
+    width: 60%;
     height: auto;
     border-radius: 50%;
+}
+
+.name{
+    color: rgba(162, 85, 239, 0.71);
 }

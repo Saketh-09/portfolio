@@ -8,7 +8,7 @@ const projects =
             Egenio: [
                 'Developed backend of the application using FastAPI framework which aims at forecasting demand, inventory metrics using ML models, providing valuable insights, and reducing 80% workload to sales & operations customers.',
                 'Imported and processed intricate data of millions of rows encompassing demand, supply, and inventory from ERP systems achieving a remarkable 95% reduction in processing time, ensuring seamless integration.',
-                'Accomplished the management and utilization of XGBoost model results, encompassing almost 90% of'+'dataset leveraged for constructing graphical elements and tabular representations, seamlessly showcasing forecasts across diverse hierarchies within the UI.'
+                'Accomplished the management and utilization of XGBoost model results, encompassing almost 90% of dataset leveraged for constructing graphical elements and tabular representations, seamlessly showcasing forecasts across diverse hierarchies within the UI.'
             ],
             Dremio: [
                 'Significantly improved workflow efficiency by configuring and managing Jenkins pipelines streamlining the software testing workflow through automation.',
