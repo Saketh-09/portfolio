@@ -20,9 +20,9 @@ export default function Home(){
                         <Grid item xs={6} >
                             <Paper elevation={0}>
                                 <Typography variant='h3' className={styles.greeting}
-                                            sx={{marginTop: '2em', fontWeight: 300}}>{home.greeting}</Typography>
+                                            sx={{marginTop: '2em', fontWeight: 400}}>{home.greeting}</Typography>
                                 <Typography variant='h3' className={styles.name}
-                                            sx={{margin: '1em', fontWeight: 300}}>
+                                            sx={{margin: '1em', fontWeight: 400}}>
                                     <motion.span className='name'
                                                  initial={{opacity: window.innerWidth < 996 ? '100%' : '0%'}}
                                                  animate={{opacity: '100%'}} transition={{delay: '1.0', duration: '1'}}

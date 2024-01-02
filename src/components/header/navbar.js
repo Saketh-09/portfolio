@@ -4,16 +4,22 @@ import {AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Container,
 
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import {resumeURL} from "./navData";
 import styles from './navbar.module.css';
 
 const pages = [{name:'Home',url:'/portfolio/'},
-    {name:'Education', url:'/portfolio/education'},
-    {name:'Experience', url:'/portfolio/experience'}];
+    {name:'Education', url:'/education'},
+    {name:'Experience', url:'/experience'}];
 
 function ResponsiveAppBar() {
+    const [activeItem, setactiveItem] = React.useState(null)
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+    const handleSetActiveItem = (item) => {
+        setactiveItem(item);
+    };
+
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -23,11 +29,12 @@ function ResponsiveAppBar() {
         setAnchorElNav(null);
     };
 
+    const activeClassName = styles.activeSection
+    const inActiveClassName = styles.inActiveSection
     return (
     <AppBar sx={{ bgcolor: "#fff", boxShadow: 0, position: 'sticky' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -71,21 +78,23 @@ function ResponsiveAppBar() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={page.url} style={{textDecoration: 'none'}}>
+                            <NavLink to={page.url} className={({ isActive}) =>
+                                isActive ? activeClassName:inActiveClassName}>
                                 <Button
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ m: 2, color: '#000', display: 'block'}}>
-                                    <Typography variant='h6' sx={{fontWeight: 300}}>{page.name}</Typography>
+                                    sx={{ m: 2, display: 'block',color:'inherit'}}>
+                                    <Typography variant='h6' sx={{fontWeight:400, color:'inherit'}} >{page.name}</Typography>
                                 </Button>
-                            </Link>
+                            </NavLink>
                         ))}
-                        <Link to={resumeURL} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
+                        <NavLink to={resumeURL} target="_blank" rel="noopener noreferrer" className={({ isActive}) =>
+                            isActive ? activeClassName:inActiveClassName}>
                             <Button
                                 onClick={handleCloseNavMenu}
-                                sx={{ m: 2, color: '#000', display: 'block'}}>
-                                <Typography variant='h6' className={styles.section}>Resume</Typography>
-                            </Button></Link>
+                                sx={{ m: 2, display: 'block', color:'inherit'}}>
+                                <Typography variant='h6' sx={{fontWeight:400, color:'inherit'}} >Resume</Typography>
+                            </Button></NavLink>
                     </Box>
                 </Toolbar>
             </Container>

@@ -1,4 +1,10 @@
-.section{
+.activeSection{
     text-decoration: none;
     color: rgba(162, 85, 239, 0.71);
+
+}
+
+.inActiveSection{
+    text-decoration: none;
+    color: #000;
 }
