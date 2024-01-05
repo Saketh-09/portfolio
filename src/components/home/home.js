@@ -17,7 +17,12 @@ export default function Home(){
             <Container maxWidth="lg">
                 <Box sx={{bgcolor: 'inherit', height: '100vh'}}>
                     <Grid container spacing={2}>
-                        <Grid item xs={6} >
+                        <Grid item lg={6} xs={12} >
+                            <Paper elevation={0}>
+                                <img src={process.env.PUBLIC_URL +'/assets/pic.jpg'} alt='pic' className={styles.pic}/>
+                            </Paper>
+                        </Grid>
+                        <Grid item lg={6} xs={12} >
                             <Paper elevation={0}>
                                 <Typography variant='h3' className={styles.greeting}
                                             sx={{marginTop: '2em', fontWeight: 400}}>{home.greeting}</Typography>
@@ -36,11 +41,6 @@ export default function Home(){
                                 <Typography className={styles.body}
                                             sx={{margin: '1em', fontWeight: 300}}>{home.aboutMe}</Typography>
                                 <Contact sx={{margin: '1em'}}></Contact>
-                            </Paper>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Paper elevation={0}>
-                            <img src={process.env.PUBLIC_URL +'/assets/pic.jpg'} alt='pic' className={styles.pic}/>
                             </Paper>
                         </Grid>
                     </Grid>

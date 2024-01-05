@@ -14,12 +14,12 @@ export default function Education() {
                 <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Education</Typography>
                 <Box sx={{borderRadius: 1, borderBlockColor: grey}}>
                     <Grid container spacing={2}>
-                        <Grid item xs={2}>
+                        <Grid item lg={2} xs={12}>
                             <Paper elevation={0}>
                                 <img src={process.env.PUBLIC_URL +'/assets/utdLogo3.png'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
-                        <Grid item xs={10}>
+                        <Grid item lg={10} xs={12}>
                             <Paper elevation={0} sx={{marginLeft: '3em'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{education.UTD}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.UTD}</Typography>
