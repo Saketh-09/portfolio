@@ -36,12 +36,12 @@ export default function Education() {
             <Container maxWidth="lg">
                 <Box sx={{ borderRadius: 1, borderBlockColor: grey}} >
                     <Grid container spacing={2}>
-                        <Grid item xs={2} >
+                        <Grid item lg={2} xs={12} >
                             <Paper elevation={0}>
                                 <img src={process.env.PUBLIC_URL +'/assets/iithLogo.png'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
-                        <Grid item xs={10} >
+                        <Grid item lg={10} xs={12} >
                             <Paper elevation={0} sx={{marginLeft: '3em'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:350}}>{education.IITH}</Typography>
                                 <Typography variant='caption' display="block" className={styles.location}>{location.IITH}</Typography>
