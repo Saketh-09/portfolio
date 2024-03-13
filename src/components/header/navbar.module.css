@@ -8,3 +8,9 @@
     text-decoration: none;
     color: #000;
 }
+
+.logo{
+    margin: 2em;
+    width: 100%;
+    height: auto;
+}

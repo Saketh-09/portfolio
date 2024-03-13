@@ -78,7 +78,7 @@ function ResponsiveAppBar() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <NavLink to={page.url} className={({ isActive}) =>
+                            <NavLink to={page.url} className={({isActive}) =>
                                 isActive ? activeClassName:inActiveClassName}>
                                 <Button
                                     key={page.name}
