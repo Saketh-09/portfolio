@@ -1,3 +1,3 @@
-const resumeURL = 'https://drive.google.com/file/d/1w1ZPUJTWpmcIEsZvLa94_4QZ-Gg1bAy7/view?usp=drive_link'
+const resumeURL = 'https://drive.google.com/file/d/1vzrsGzOscWiPXyaG6wBpalGwojp1I11G/view?usp=sharing'
 
 export {resumeURL}
