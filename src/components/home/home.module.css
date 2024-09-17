@@ -1,10 +1,9 @@
 .greeting{
-    margin: 4em;
+    margin: 2em;
 }
 
 .body{
     margin: 4em;
-
 }
 
 .pic{
@@ -17,4 +16,5 @@
 
 .name{
     color: rgba(162, 85, 239, 0.71);
+    
 }
