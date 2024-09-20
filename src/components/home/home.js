@@ -87,7 +87,7 @@ export default function Home() {
                     <IconButton href="http://linkedin.com/in/annimalla-saketh/" target="_blank">
                         <LinkedIn />
                     </IconButton>
-                    <IconButton href="mailto:sakethannialla9@gmail.com">
+                    <IconButton href="mailto:sakethannimalla9@gmail.com">
                         <Email />
                     </IconButton>
                 </div>
