@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Card, CardContent, Typography, CardMedia, CardActionArea } from '@mui/material';
 import myImage from './static/meteoroRNN.png';
+import portfolioimg from './static/portfolio.png';
 
 const projects = [
   {
@@ -12,27 +13,21 @@ const projects = [
   {
     title: 'Personal Website',
     description: 'A personal portfolio to list my work and skills. The frontend is built using ReactJS. And used ',
-    imageUrl: '/path-to-image1.jpg', 
+    imageUrl: portfolioimg, 
     githubUrl: 'https://github.com/yourusername/portfolio-website',
-  },
-  {
-    title: 'Chat Application',
-    description: 'A real-time chat application built with WebSockets.',
-    imageUrl: '/path-to-image3.jpg', 
-    githubUrl: 'https://github.com/yourusername/chat-app', 
   },
 ];
 
 function ProjectsPage() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='m-14'>
       <Typography variant="h4" align="center" gutterBottom>
-        My Projects
+        Projects
       </Typography>
       <Grid container spacing={4}>
         {projects.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card>
+          <Grid item xs={12} sm={6} md={4} key={index}  >
+            <Card sx={{background: 'inherit', borderRadius: 4}}>
               <CardActionArea onClick={() => window.open(project.githubUrl, '_blank')}>
                 <CardMedia
                   component="img"

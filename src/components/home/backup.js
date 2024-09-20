@@ -11,11 +11,13 @@ import {TypeAnimation} from 'react-type-animation';
 
 export default function HomeContent(){
     return (
-        <><Typography variant='h3' className={styles.greeting} sx={{ margin: '0.5em', fontWeight: 400 }}>
+        <>
+        <div className='m-14'>
+        <Typography variant='h3' className={styles.greeting} sx={{ fontWeight: 400 }}>
         {home.greeting}
         </Typography>
 
-        <Typography variant='h3' className={styles.name} sx={{ margin: '0.5em', fontWeight: 400 }}>
+        <Typography variant='h3' className={styles.name} sx={{ fontWeight: 400 }}>
         <motion.span
             className='name'
             initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }}
@@ -44,6 +46,7 @@ export default function HomeContent(){
 
         <Typography className={styles.body} sx={{ margin: '1em', fontWeight: 300 }}>
         {home.aboutMe}
-        </Typography></>
+        </Typography></div></>
+        
     )
 }

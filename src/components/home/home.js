@@ -23,7 +23,8 @@ export default function Home() {
                         {/* Sidebar (image) - Fixed width */}
                         <Grid item xs={12} lg={3} sx={{ marginTop: '1em', marginBottom: '1em' }}>
             <Paper
-                elevation={2} className='bg-[radial-gradient(circle_500px_at_50%_200px,#e3d5f4,transparent)]'
+                elevation={2}
+                className="bg-[radial-gradient(circle_500px_at_50%_200px,#e3d5f4,transparent)]"
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -31,9 +32,11 @@ export default function Home() {
                     justifyContent: 'flex-start',
                     height: '100%',
                     padding: '1.5em',
-                    position: 'sticky', // To keep the sidebar sticky on scroll
+                    position: 'sticky', // Keeps the sidebar sticky on scroll
                     top: '1em',
-                    borderRadius: '16px'
+                    borderRadius: '16px',
+                    backgroundColor: '#8EC5FC',
+                    backgroundImage: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)'
                 }}
             >
                 <img
@@ -44,13 +47,13 @@ export default function Home() {
                 />
 
                 {/* Personal Details */}
-                <Box sx={{ maxWidth: '100%', marginTop: '2em', color: 'text.primary' }}>
+                <Box className='content' sx={{ maxWidth: '100%', marginTop: '2em' }}>
                     {/* Email */}
                     <Box sx={{ marginBottom: '1.5em' }}>
                         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                             Email address
                         </Typography>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                        <Typography variant="h7">
                             sakethannimalla9@gmail.com
                         </Typography>
                     </Box>
@@ -60,17 +63,17 @@ export default function Home() {
                         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                             Home address
                         </Typography>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                        <Typography variant="h7">
                             Dallas, Texas, USA
                         </Typography>
                     </Box>
 
                     {/* Phone Number */}
                     <Box>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                        <Typography variant="body2">
                             Phone number
                         </Typography>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                        <Typography variant="h7">
                             +1 (945)-244-2224
                         </Typography>
                     </Box>
@@ -78,16 +81,13 @@ export default function Home() {
 
                 {/* Social Media Links */}
                 <div style={{ marginTop: '1.5em', display: 'flex', justifyContent: 'center', gap: '1em' }}>
-                    <IconButton href="https://github.com/yourprofile" target="_blank">
+                    <IconButton href="https://github.com/Saketh-09" target="_blank">
                         <GitHub />
                     </IconButton>
-                    <IconButton href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <IconButton href="http://linkedin.com/in/annimalla-saketh/" target="_blank">
                         <LinkedIn />
                     </IconButton>
-                    <IconButton href="https://twitter.com/yourprofile" target="_blank">
-                        <Twitter />
-                    </IconButton>
-                    <IconButton href="mailto:your.email@example.com">
+                    <IconButton href="mailto:sakethannialla9@gmail.com">
                         <Email />
                     </IconButton>
                 </div>
@@ -107,9 +107,22 @@ export default function Home() {
 
                         {/* Main Content */}
                         <Grid item xs={12} lg={9} sx={{ marginTop: '1em', marginBottom: '1em', overflow: 'hidden' }}>
-                            <Paper elevation={2} className='bg-[radial-gradient(circle_2000px_at_20%_200px,#e3d5f4,transparent)]' sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'auto', borderRadius: '16px'}}>
+                            <Paper
+                                elevation={2}
+                                className="bg-[radial-gradient(circle_2000px_at_20%_200px,#e3d5f4,transparent)]"
+                                sx={{
+                                    minHeight: '100vh',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between',
+                                    overflow: 'auto',
+                                    borderRadius: '16px',
+                                    backgroundColor: '#8EC5FC',
+                                    backgroundImage: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)'
+                                }}
+                            >
                                 {/* Main Content - Remaining width */}
-                                <Box sx={{ flexGrow: 1 }}>
+                                <Box sx={{ flexGrow: 1}}>
                                     <Routes>
                                         <Route path='/portfolio/' element={<HomeContent />} />
                                         <Route path='/education' element={<Education />} />
@@ -117,7 +130,7 @@ export default function Home() {
                                         <Route path='/projects' element={<ProjectsPage />} />
                                     </Routes>
                                 </Box>
-                                <Contact sx={{ margin: '1em' }} />
+                                {/* <Contact sx={{ margin: '1em' }} /> */}
                             </Paper>
                         </Grid>
 

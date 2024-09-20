@@ -1,13 +1,9 @@
 const home = {greeting:'Hello There! I\'m ',
     aboutMe:'I\'m a Computer Science graduate student at the University of Texas at Dallas,' +
-        ' actively seeking 2024 summer internships in software engineering. Holding an ' +
+        ' actively seeking spring internships and 2025 New grad roles in software engineering. Holding an ' +
         'undergraduate degree from IIT Hyderabad, and backed by two years of industry experience,' +
         ' I am an enthusiastic and driven full-stack developer with a passion for building ' +
-        'applications. With expertise in backend development frameworks such as FastAPI, Django, ' +
-        'and Flask, along with JavaScript libraries and frameworks like ReactJS and Next.js, ' +
-        'I am experienced at delivering high-quality solutions. I also possess experience in ' +
-        'automation testing, where I further developed my skills in Jenkins, CI/CD pipelines, ' +
-        'and Selenium while developing and maintaining testing suites for Dremio data lakehouses.'
+        'applications. My expertise extends to frameworks like FastAPI, NestJS, Flask, Django, ExpressJS, Spring Boot, AngularJS, and ReactJS, as well as tools for data streaming like Kafka, gRPC, and WebSocket. I’m skilled in managing large-scale databases using MySQL, PostgreSQL, MongoDB, and Redis, and I’ve deployed complex systems on cloud platforms like AWS, utilizing services such as EC2, S3, SageMaker, RDS. I"ve contributed to impactful projects, from cloud-based IC evaluation systems to predictive models for sales and operations metrics using advanced machine learning algorithms.'
         // ' I\'m eager to contribute my skills and enthusiasm to innovative projects.'
 }
 

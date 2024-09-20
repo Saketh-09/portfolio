@@ -8,19 +8,19 @@ import styles from './education.module.css'
 import {education,dates, course, cgpa, location, additional} from './content'
 export default function Education() {
     return (
-        <div id="education" style={{margin: '2em'}}>
+        <div id="education" className='m-14'>
             <CssBaseline />
             <Container maxWidth="lg" >
                 <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Education</Typography>
                 <Box sx={{borderRadius: 1, borderBlockColor: grey}}>
                     <Grid container spacing={2}>
                         <Grid item lg={2} xs={12}>
-                            <Paper elevation={0}>
-                                <img src={process.env.PUBLIC_URL +'/assets/utdLogo3.png'} alt='utd logo' className={styles.logo}/>
+                            <Paper elevation={0} sx={{background: 'inherit'}}>
+                                <img src={process.env.PUBLIC_URL +'/assets/utdLogo.png'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12}>
-                            <Paper elevation={0} sx={{marginLeft: '3em'}}>
+                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{education.UTD}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.UTD}</Typography>
                                 <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{course.UTD}</Typography>
@@ -37,12 +37,12 @@ export default function Education() {
                 <Box sx={{ borderRadius: 1, borderBlockColor: grey}} >
                     <Grid container spacing={2}>
                         <Grid item lg={2} xs={12} >
-                            <Paper elevation={0}>
+                            <Paper elevation={0} sx={{background: 'inherit'}}>
                                 <img src={process.env.PUBLIC_URL +'/assets/iithLogo.png'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12} >
-                            <Paper elevation={0} sx={{marginLeft: '3em'}}>
+                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:350}}>{education.IITH}</Typography>
                                 <Typography variant='caption' display="block" className={styles.location}>{location.IITH}</Typography>
                                 <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{course.IITH}</Typography>

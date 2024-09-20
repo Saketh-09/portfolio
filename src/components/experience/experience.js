@@ -9,6 +9,7 @@ import {name, location, role, dates, projects} from './expData'
 export default function Experience() {
     const beehyvKeys = Object.keys(projects.beehyv);
     const newAgeKeys = Object.keys(projects.newage);
+    const utdKeys = Object.keys(projects.utd);
 
     const renderPoints = (keys, data) => {
         return keys.map((key) => (
@@ -26,19 +27,63 @@ export default function Experience() {
     };
 
     return (
-        <div id="education" style={{margin: '2em'}}>
+        <div id="education" className='m-14'>
+            <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Experience</Typography>
             <CssBaseline />
+            <Container maxWidth="lg">
+                <Box sx={{ borderRadius: 1, borderBlockColor: grey}} >
+                    <Grid container spacing={2}>
+                        <Grid item lg={2} xs={12} >
+                            <Paper elevation={0} sx={{background: 'inherit'}}>
+                                <img src={process.env.PUBLIC_URL +'/assets/beehyvLogo.svg'} alt='utd logo' className={styles.logo}/>
+                            </Paper>
+                        </Grid>
+                        <Grid item lg={10} xs={12} >
+                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
+                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.beehyv2}</Typography>
+                                <Typography className={styles.location} variant='caption' display="block">{location.beehyv2}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.beehyv2}</Typography>
+                                <Typography className={styles.dates} variant='caption' display="block">{dates.beehyv2}</Typography>
+                                <div>{renderPoints(utdKeys,projects.beehyv2)}</div>
+                                <br/>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </Box>
+                <hr className={styles.hr}/>
+            </Container>
+            <Container maxWidth="lg">
+                <Box sx={{ borderRadius: 1, borderBlockColor: grey}} >
+                    <Grid container spacing={2}>
+                        <Grid item lg={2} xs={12} >
+                            <Paper elevation={0} sx={{background: 'inherit'}}>
+                                <img src={process.env.PUBLIC_URL +'/assets/utdLogo.png'} alt='utd logo' className={styles.logo}/>
+                            </Paper>
+                        </Grid>
+                        <Grid item lg={10} xs={12} >
+                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
+                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.utd}</Typography>
+                                <Typography className={styles.location} variant='caption' display="block">{location.utd}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.utd}</Typography>
+                                <Typography className={styles.dates} variant='caption' display="block">{dates.utd}</Typography>
+                                <div>{renderPoints(utdKeys,projects.utd)}</div>
+                                <br/>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </Box>
+                <hr className={styles.hr}/>
+            </Container>
             <Container maxWidth="lg" >
-                <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Experience</Typography>
                 <Box sx={{borderRadius: 1, borderBlockColor: grey}}>
                     <Grid container spacing={2}>
                         <Grid item lg={2} xs={12}>
-                            <Paper elevation={0}>
+                            <Paper elevation={0} sx={{background: 'inherit'}}>
                                 <img src={process.env.PUBLIC_URL +'/assets/beehyvLogo.svg'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12}>
-                            <Paper elevation={0} sx={{marginLeft: '3em'}}>
+                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.beehyv}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.beehyv}</Typography>
                                 <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.beehyv}</Typography>
@@ -55,12 +100,12 @@ export default function Experience() {
                 <Box sx={{ borderRadius: 1, borderBlockColor: grey}} >
                     <Grid container spacing={2}>
                         <Grid item lg={2} xs={12} >
-                            <Paper elevation={0}>
+                            <Paper elevation={0} sx={{background: 'inherit'}}>
                                 <img src={process.env.PUBLIC_URL +'/assets/newageitLogo.jpeg'} alt='utd logo' className={styles.logo}/>
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12} >
-                            <Paper elevation={0} sx={{marginLeft: '3em'}}>
+                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.newage}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.newage}</Typography>
                                 <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.newage}</Typography>

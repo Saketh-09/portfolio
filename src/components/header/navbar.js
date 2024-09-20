@@ -33,7 +33,7 @@ const pages = [{name:'Home',url:'/portfolio/'},
         const inActiveClassName = styles.inActiveSection;
     
         return (
-            <AppBar sx={{ bgcolor: 'inherit', boxShadow: 0, position: 'sticky'}}>
+            <AppBar sx={{ bgcolor: '#fff', boxShadow: 0, position: 'sticky'}}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters sx={{ justifyContent: 'center', alignItems: 'center' }}>
                         {/* Mobile Menu */}
