@@ -14,7 +14,7 @@ const projects = [
     title: 'Personal Website',
     description: 'A personal portfolio to list my work and skills. The frontend is built using ReactJS. And used ',
     imageUrl: portfolioimg, 
-    githubUrl: 'https://github.com/yourusername/portfolio-website',
+    githubUrl: 'https://github.com/Saketh-09/portfolio',
   },
 ];
 
