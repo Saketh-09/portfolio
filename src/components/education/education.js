@@ -6,12 +6,13 @@ import {Grid, Paper, Typography} from "@mui/material";
 import {grey} from "@mui/material/colors";
 import styles from './education.module.css'
 import {education,dates, course, cgpa, location, additional} from './content'
+import AnimatedTitle from '../animated/animsted-text';
 export default function Education() {
     return (
         <div id="education" className='m-14'>
             <CssBaseline />
             <Container maxWidth="lg" >
-                <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Education</Typography>
+                <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}><AnimatedTitle text="EDUCATION" /></Typography>
                 <Box sx={{borderRadius: 1, borderBlockColor: grey}}>
                     <Grid container spacing={2}>
                         <Grid item lg={2} xs={12}>

@@ -6,6 +6,7 @@ import {Grid, Paper, Typography} from "@mui/material";
 import {grey} from "@mui/material/colors";
 import styles from './experience.module.css'
 import {name, location, role, dates, projects} from './expData'
+import AnimatedTitle from '../animated/animsted-text';
 export default function Experience() {
     const beehyvKeys = Object.keys(projects.beehyv);
     const newAgeKeys = Object.keys(projects.newage);
@@ -28,7 +29,7 @@ export default function Experience() {
 
     return (
         <div id="education" className='m-14'>
-            <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}>Experience</Typography>
+            <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}><AnimatedTitle text="EXPERIENCE" /></Typography>
             <CssBaseline />
             <Container maxWidth="lg">
                 <Box sx={{ borderRadius: 1, borderBlockColor: grey}} >

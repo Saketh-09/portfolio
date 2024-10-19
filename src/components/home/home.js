@@ -11,6 +11,8 @@ import ProjectsPage from '../projects/projects';
 import { Grid, Paper, Typography, IconButton, Button } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Email } from '@mui/icons-material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Icon from '@mdi/react';
+import { mdiArrowDown } from '@mdi/js';
 
 export default function Home() {
     return (
@@ -32,7 +34,7 @@ export default function Home() {
                     justifyContent: 'flex-start',
                     height: '100%',
                     padding: '1.5em',
-                    position: 'sticky', // Keeps the sidebar sticky on scroll
+                    position: 'sticky', 
                     top: '1em',
                     borderRadius: '16px',
                     backgroundColor: '#8EC5FC',
@@ -45,39 +47,24 @@ export default function Home() {
                     alt='pic'
                     style={{ width: '60%', height: 'auto', marginTop: '1em' }}
                 />
-
+                <span class="bg-gray-100 text-gray-800 text-xs font-medium my-4 me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">Software Engineer</span>
                 {/* Personal Details */}
-                <Box className='content' sx={{ maxWidth: '100%', marginTop: '2em' }}>
-                    {/* Email */}
-                    <Box sx={{ marginBottom: '1.5em' }}>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                            Email address
-                        </Typography>
-                        <Typography variant="h7">
-                            sakethannimalla9@gmail.com
-                        </Typography>
-                    </Box>
+                
+<dl class="mx-2 max-w-md text-gray-900 divide-y divide-gray-200 dark:text-gray-600 dark:divide-gray-700">
+    <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-600 md:text-md dark:text-gray-500">Email address</dt>
+        <dd class="text-md font-semibold">sakethannimalla9@gmail.com</dd>
+    </div>
+    <div class="flex flex-col py-3">
+        <dt class="mb-1 text-gray-500 md:text-md dark:text-gray-500">Home address</dt>
+        <dd class="text-md font-semibold">Dallas, Texas, USA</dd>
+    </div>
+    <div class="flex flex-col pt-3">
+        <dt class="mb-1 text-gray-500 md:text-md dark:text-gray-500">Phone number</dt>
+        <dd class="text-md font-semibold">+1 (945)-244-2224</dd>
+    </div>
+</dl>
 
-                    {/* Home Address */}
-                    <Box sx={{ marginBottom: '1.5em' }}>
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                            Home address
-                        </Typography>
-                        <Typography variant="h7">
-                            Dallas, Texas, USA
-                        </Typography>
-                    </Box>
-
-                    {/* Phone Number */}
-                    <Box>
-                        <Typography variant="body2">
-                            Phone number
-                        </Typography>
-                        <Typography variant="h7">
-                            +1 (945)-244-2224
-                        </Typography>
-                    </Box>
-                </Box>
 
                 {/* Social Media Links */}
                 <div style={{ marginTop: '1.5em', display: 'flex', justifyContent: 'center', gap: '1em' }}>
@@ -95,13 +82,16 @@ export default function Home() {
                 {/* Download Resume Button */}
                 <Button
                     variant="contained"
-                    color="primary"
+                    // color="primary"
                     href={process.env.PUBLIC_URL + '/assets/resume.pdf'}
                     target="_blank"
-                    sx={{ marginTop: '1.5em', width: '80%' }}
+                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-4 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                 >
-                    Download Resume
+                    Download Resume <Icon path={mdiArrowDown} size={0.8} style={{ display: 'inline' }}/>
+
+
                 </Button>
+
             </Paper>
         </Grid>
 
