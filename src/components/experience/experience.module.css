@@ -1,5 +1,6 @@
 .education{
     text-align: left;
+    font-weight: 400;
 }
 
 .course,.cgpa{
@@ -31,3 +32,19 @@
     background: rgb(198 185 202 / 54%); /* Use a gradient for a stylish effect */
     margin: 20px 0; /* Add some margin for spacing */
 }
+
+/* Default style */
+.logo {
+    width: 60%; 
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  /* Mobile style */
+  @media (max-width: 600px) { /* Adjust max-width based on your mobile breakpoint */
+    .logo {
+      width: 70px; 
+      height: auto;
+      border-radius: 50%;
+    }
+  }

@@ -16,7 +16,7 @@ export default function Experience() {
         return keys.map((key) => (
             <div key={key}>
                 <Typography variant='h6' className={styles.cgpa} sx={{fontWeight:350}}>{key}</Typography>
-                <ul>
+                <ul class="space-y-1 text-gray-500 dark:text-gray-700 list-disc">
                     {data[key].map((point, index) => (
                         <li key={index}>
                             <Typography variant='body1' className={styles.cgpa}>{point}</Typography>
@@ -28,7 +28,7 @@ export default function Experience() {
     };
 
     return (
-        <div id="education" className='m-14'>
+        <div id="education" className='m-4 sm:m-14'>
             <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}><AnimatedTitle text="EXPERIENCE" /></Typography>
             <CssBaseline />
             <Container maxWidth="lg">
@@ -40,10 +40,10 @@ export default function Experience() {
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12} >
-                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
-                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.beehyv2}</Typography>
+                            <Paper elevation={0} sx={{marginLeft: { sm: '3em' }, background: 'inherit'}}>
+                                <Typography variant='h6' className={styles.education}>{name.beehyv2}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.beehyv2}</Typography>
-                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.beehyv2}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:400}}>{role.beehyv2}</Typography>
                                 <Typography className={styles.dates} variant='caption' display="block">{dates.beehyv2}</Typography>
                                 <div>{renderPoints(utdKeys,projects.beehyv2)}</div>
                                 <br/>
@@ -62,10 +62,10 @@ export default function Experience() {
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12} >
-                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
-                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.utd}</Typography>
+                            <Paper elevation={0} sx={{marginLeft: { sm: '3em' }, background: 'inherit'}}>
+                                <Typography variant='h6' className={styles.education} >{name.utd}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.utd}</Typography>
-                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.utd}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:400}}>{role.utd}</Typography>
                                 <Typography className={styles.dates} variant='caption' display="block">{dates.utd}</Typography>
                                 <div>{renderPoints(utdKeys,projects.utd)}</div>
                                 <br/>
@@ -84,10 +84,10 @@ export default function Experience() {
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12}>
-                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
-                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.beehyv}</Typography>
+                            <Paper elevation={0} sx={{marginLeft: { sm: '3em' }, background: 'inherit'}}>
+                                <Typography variant='h6' className={styles.education}>{name.beehyv}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.beehyv}</Typography>
-                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.beehyv}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:400}}>{role.beehyv}</Typography>
                                 <Typography className={styles.dates} variant='caption' display="block">{dates.beehyv}</Typography>
                                 <div>{renderPoints(beehyvKeys,projects.beehyv)}</div>
                                 <br/>
@@ -106,10 +106,10 @@ export default function Experience() {
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12} >
-                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
-                                <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{name.newage}</Typography>
+                            <Paper elevation={0} sx={{marginLeft: { sm: '3em' }, background: 'inherit'}}>
+                                <Typography variant='h6' className={styles.education}>{name.newage}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.newage}</Typography>
-                                <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{role.newage}</Typography>
+                                <Typography variant='h6' className={styles.course} sx={{fontWeight:400}}>{role.newage}</Typography>
                                 <Typography className={styles.dates} variant='caption' display="block">{dates.newage}</Typography>
                                 <div>{renderPoints(newAgeKeys,projects.newage)}</div>
                                 <br/>

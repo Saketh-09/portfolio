@@ -21,7 +21,7 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 export default function HomeContent(){
     return (
         <>
-        <div className='m-14'>
+        <div className='m-4 sm:m-14'>
         <Typography variant='h3' className={styles.greeting} sx={{ fontWeight: 400 }}>
         {home.greeting}
         </Typography>

@@ -47,7 +47,7 @@ export default function Home() {
                     alt='pic'
                     style={{ width: '60%', height: 'auto', marginTop: '1em' }}
                 />
-                <span class="bg-gray-100 text-gray-800 text-xs font-medium my-4 me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">Software Engineer</span>
+                <span class="bg-gray-100 text-gray-100 text-xs font-medium my-4 me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 border border-gray-500">Software Engineer</span>
                 {/* Personal Details */}
                 
 <dl class="mx-2 max-w-md text-gray-900 divide-y divide-gray-200 dark:text-gray-600 dark:divide-gray-700">

@@ -27,7 +27,7 @@ const projects = [
 
 function ProjectsPage() {
   return (
-    <div className='m-14'>
+    <div className='m-4 sm:m-14'>
       <Typography variant="h4" gutterBottom>
         <AnimatedTitle text="PROJECTS" />
       </Typography>

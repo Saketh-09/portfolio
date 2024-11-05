@@ -32,3 +32,16 @@
     background: rgb(198 185 202 / 54%); /* Use a gradient for a stylish effect */
     margin: 20px 0; /* Add some margin for spacing */
 }
+
+/* Default style */
+.logo {
+    width: 100px; /* Adjust default size as needed */
+    height: auto;
+  }
+  
+  /* Mobile style */
+  @media (max-width: 600px) { /* Adjust max-width based on your mobile breakpoint */
+    .logo {
+      width: 70px; /* Reduce size for mobile */
+    }
+  }

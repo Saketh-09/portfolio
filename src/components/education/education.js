@@ -9,7 +9,7 @@ import {education,dates, course, cgpa, location, additional} from './content'
 import AnimatedTitle from '../animated/animsted-text';
 export default function Education() {
     return (
-        <div id="education" className='m-14'>
+        <div id="education" className='m-4 sm:m-14'>
             <CssBaseline />
             <Container maxWidth="lg" >
                 <Typography variant='h3' className={styles.education} sx={{fontWeight:300, letterSpacing: 4}}><AnimatedTitle text="EDUCATION" /></Typography>
@@ -21,7 +21,7 @@ export default function Education() {
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12}>
-                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
+                            <Paper elevation={0} sx={{ marginLeft: { sm: '3em' }, background: 'inherit'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:300}}>{education.UTD}</Typography>
                                 <Typography className={styles.location} variant='caption' display="block">{location.UTD}</Typography>
                                 <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{course.UTD}</Typography>
@@ -43,7 +43,7 @@ export default function Education() {
                             </Paper>
                         </Grid>
                         <Grid item lg={10} xs={12} >
-                            <Paper elevation={0} sx={{marginLeft: '3em', background: 'inherit'}}>
+                            <Paper elevation={0} sx={{ marginLeft: { sm: '3em' }, background: 'inherit'}}>
                                 <Typography variant='h6' className={styles.education} sx={{fontWeight:350}}>{education.IITH}</Typography>
                                 <Typography variant='caption' display="block" className={styles.location}>{location.IITH}</Typography>
                                 <Typography variant='h6' className={styles.course} sx={{fontWeight:300}}>{course.IITH}</Typography>
