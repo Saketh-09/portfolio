@@ -13,14 +13,15 @@ const Character = styled(motion.span)`
   margin-right: -0.05em;
 `;
 
-export default function AnimatedTitle({ text }) {  // Accept text as a prop
+export default function AnimatedTitle({ text }) {
+  // Accept text as a prop
   const ctrls = useAnimation();
-  
+
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
-  
+
   useEffect(() => {
     if (inView) {
       ctrls.start("visible");
@@ -28,7 +29,7 @@ export default function AnimatedTitle({ text }) {  // Accept text as a prop
       ctrls.start("hidden");
     }
   }, [ctrls, inView]);
-  
+
   const characterAnimation = {
     hidden: {
       opacity: 0,
@@ -43,7 +44,7 @@ export default function AnimatedTitle({ text }) {  // Accept text as a prop
       },
     },
   };
-  
+
   return (
     <Title aria-label={text} role="heading">
       {text.split("").map((character, index) => (
@@ -53,7 +54,8 @@ export default function AnimatedTitle({ text }) {  // Accept text as a prop
           key={index}
           initial="hidden"
           animate={ctrls}
-          variants={characterAnimation}>
+          variants={characterAnimation}
+        >
           {character}
         </Character>
       ))}

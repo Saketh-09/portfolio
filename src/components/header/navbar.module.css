@@ -1,16 +1,15 @@
-.activeSection{
-    text-decoration: none;
-    color: rgba(162, 85, 239, 0.71);
-    
+.activeSection {
+  text-decoration: none;
+  color: rgba(162, 85, 239, 0.71);
 }
 
-.inActiveSection{
-    text-decoration: none;
-    color: #444444;
+.inActiveSection {
+  text-decoration: none;
+  color: #444444;
 }
 
-.logo{
-    margin: 2em;
-    width: 100%;
-    height: auto;
+.logo {
+  margin: 2em;
+  width: 100%;
+  height: auto;
 }

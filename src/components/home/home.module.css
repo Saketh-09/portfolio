@@ -1,23 +1,22 @@
-.greeting{
-    margin: 2em;
+.greeting {
+  margin: 2em;
 }
 
-.body{
-    margin: 4em;
+.body {
+  margin: 4em;
 }
 
-.pic{
-    margin-left: 1em;
-    margin-top: 5em;
-    width: 60%;
-    height: auto;
-    border-radius: 50%;
+.pic {
+  margin-left: 1em;
+  margin-top: 5em;
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
 }
 
-.name{
-    color: rgb(249 246 252);
-
+.name {
+  color: rgb(249 246 252);
 }
-.content{
-    color: rgb(77 62 62);
+.content {
+  color: rgb(77 62 62);
 }
