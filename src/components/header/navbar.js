@@ -136,8 +136,8 @@ function ResponsiveAppBar() {
                       variant="h6"
                       class={
                         isActive
-                          ? "text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-                          : "bg-transparent hover:bg-gray-900 text-gray-700 font-medium hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-lg"
+                          ? "text-white bg-[rgba(176,133,193,1)] hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                          : "bg-transparent hover:bg-gray-900 text-gray-700 font-medium hover:text-white py-2 px-4 border border-[rgba(85,71,90,1)] hover:border-transparent rounded-lg"
                       }
                       sx={{
                         fontWeight: 400,
@@ -159,7 +159,7 @@ function ResponsiveAppBar() {
                 <Typography
                   variant="h6"
                   sx={{ fontWeight: 400, color: "inherit" }}
-                  class="bg-transparent hover:bg-gray-900 text-gray-700 font-medium hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-lg"
+                  class="bg-transparent hover:bg-gray-900 text-gray-700 font-medium hover:text-white py-2 px-4 border border-[rgba(85,71,90,1)] hover:border-transparent rounded-lg"
                 >
                   Resume
                 </Typography>

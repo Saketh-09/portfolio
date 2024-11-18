@@ -56,7 +56,7 @@ export default function Home() {
                   alt="pic"
                   style={{ width: "60%", height: "auto", marginTop: "1em" }}
                 />
-                <span class="bg-gray-100 text-gray-100 text-xs font-medium my-4 me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 border border-gray-500">
+                <span class="bg-[rgba(95,154,192,1)] text-gray-100 text-xs font-medium my-4 me-2 px-2.5 py-0.5 rounded border border-gray-500">
                   Software Engineer
                 </span>
                 {/* Personal Details */}
@@ -116,7 +116,7 @@ export default function Home() {
                   // color="primary"
                   href={process.env.PUBLIC_URL + "/assets/resume.pdf"}
                   target="_blank"
-                  class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-4 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  class="text-white bg-[rgba(127,97,133,1)] hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-4 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                 >
                   Download Resume{" "}
                   <Icon

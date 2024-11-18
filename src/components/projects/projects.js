@@ -34,7 +34,14 @@ const projects = [
       on a self-hosted setup. Built a CI/CD pipeline with Jenkins and GitHub, with infrastructure managed by Ansible.\
       Implemented load balancing, and monitoring with Prometheus and Grafana.",
     imageUrl: portfolioimg,
-    githubUrl: "https://github.com/Saketh-09/microservices",
+    githubUrl: "https://github.com/Saketh-09/event-driven-ecommerce",
+  },
+  {
+    title: "NewsAPI ELK pipeline",
+    description:
+      "Leveraged NewsAPI to fetch real-time news data, processed it with PySpark Structured Streaming and Apache Kafka for Named Entity Recognition (NER), and visualized insights using the ELK stack (Elasticsearch, Logstash, Kibana).",
+    imageUrl: portfolioimg,
+    githubUrl: "https://github.com/Saketh-09/newAPI-ELK",
   },
 ];
 
@@ -48,20 +55,20 @@ function ProjectsPage() {
       <Grid container spacing={4}>
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <div className="max-w-sm h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+            <div className="max-w-sm h-full p-6 bg-[rgba(85,71,90,1)] border border-gray-200 rounded-lg shadow dark:border-gray-700 flex flex-col justify-between">
               <a href={project.githubUrl}>
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-700 dark:text-white">
                   {project.title}
                 </h5>
               </a>
               <div className="mb-4 h-32 overflow-hidden">
-                <p className="font-normal text-gray-700 dark:text-gray-400">
+                <p className="font-normal text-gray-300 dark:text-gray-300">
                   {project.description}
                 </p>
               </div>
               <a
                 href={project.githubUrl}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="inline-flex bg-[rgba(89,97,139,1)] items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Github
                 <svg
