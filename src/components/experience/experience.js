@@ -71,7 +71,7 @@ const ExperienceTimelineItem = ({
             padding: "10px",
             background: "inherit",
             borderRadius: "16px",
-            background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.3) 0%, hsla(186, 100%, 69%, 0.3) 100%)"
+            background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.4) 0%, hsla(186, 100%, 69%, 0.3) 100%)"
           }}
         >
           <Typography variant="h6" sx={{ fontWeight: 350 }}>

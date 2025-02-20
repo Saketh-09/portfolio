@@ -25,13 +25,9 @@ const dates = {
 const projects = {
   beehyv: {
     "": [
-      "Built the ingestion module utilizing FastAPI to import large volumes of raw data in various formats from ERP systems" +
-        "and perform data preprocessing, making the data suitable for training models. Achieved a remarkable 95% reduction" +
-        "in processing time by implementing asynchronous batch insertions.",
-      "Implemented XGBoost and ARIMA models to predict sales & operations metrics using AWS SageMaker, finding" +
-        "optimal sets of hyper-parameters, achieving significant improvement in performance metrics.",
-      "Defined and implemented data models using SQLAlchemy as ORM and Alembic for migrations, tailoring schemas for" +
-        "demand supply forecasting, inventory metrics, and analytics along with managing PostgreSQL on AWS RDS.",
+      "Built the ingestion module utilizing FastAPI to import large volumes of raw data in various formats from ERP systems and perform data preprocessing, making the data suitable for training models. Achieved a remarkable 95% reduction in processing time by implementing asynchronous batch insertions.",
+      "Defined and implemented data models using SQLAlchemy as ORM and Alembic for migrations, tailoring schemas for demand supply forecasting, inventory metrics, and analytics along with managing PostgreSQL.",
+      "Managed deployments, services, configuration of data pipelines by developing Kubernetes manifests,Helm charts.",
     ],
   },
   newage: {
@@ -43,20 +39,21 @@ const projects = {
   },
   utd: {
     "": [
-      "Conducted hands on Java programming workshops to high school students with class sizes averaging 15 students to" +
-        "reinforce understanding of object oriented programming principles and problem solving techniques.",
+      "Conducted hands on Java programming workshops to students with class sizes averaging 15 to" +
+        " reinforce understanding of object oriented programming principles and problem solving techniques.",
     ],
   },
   beehyv2: {
     "": [
-      " Developed the cloud controller and storage layers of a robust data pipeline using FastAPI, Kafka, gRPC and Time series" +
-        "PostgreSQL for cloud-based IC evaluation, processing real time data from remote labs providing accelerated IC adoption.",
-      "Transitioned inter service communication from WebSockets to gRPC following rigorous benchmark study achieving a" +
-        "60% improvement in latency and throughput.",
-      "Created ReactJS components using TypeScript to display real time data visualization of IC evaluation results via" +
-        "WebSockets, utilizing compressed binary data reducing refresh latency by 2 times.",
-      "Managed deployments, services, and configuration of data pipelines by developing Kubernetes manifests and Helm" +
-        "charts. Automated deployment processes for Kubernetes clusters using CI/CD pipelines with Jenkins on Amazon EKS.",
+      "Genie (RAG-based LLM Platform):",
+      "Developed chains using LangChain for a RAG based platform with configurable LLM abstraction for switching between multiple large language models like OpenAI GPT-4.",
+      "Built connectors for Google Drive and SharePoint to enable multi-source ingestion of various file types, utilizing Airflow, along with chunking and embedding, and integrated PostgreSQL with pgvector for semantic search and retrieval.",
+      "Integrated LangFuse for monitoring LangChain pipelines, evaluating model performance across different configurations.",
+      "Implemented Role-Based Access Control for multi-tenancy using Keycloak, integrated ClickHouse for event logging, and embedded Superset dashboards in ReactJS for visualizing ClickHouse data.",
+      "Tenxer Labs (Cloud-Based IC Evaluation Platform):",
+      "Developed the cloud controller and storage layers of a robust data pipeline using FastAPI, Kafka, gRPC and Time series PostgreSQL for cloud-based IC evaluation, processing real time data from remote labs providing accelerated IC adoption.",
+      "Transitioned inter service communication from WebSockets to gRPC following rigorous benchmark study achieving a 60% improvement in latency and throughput.",
+      "Created ReactJS components using TypeScript, React Query, Zustand to display real time data visualization of IC evaluation results via WebSockets, utilizing compressed binary data reducing refresh latency by 2 times.",
     ],
   },
 };

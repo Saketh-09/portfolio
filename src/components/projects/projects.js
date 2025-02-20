@@ -110,19 +110,20 @@ import {
 } from "@mui/material";
 import AnimatedTitle from "../animated/animsted-text";
 import myImage from "./static/meteoroRNN.png";
-import portfolioimg from "./static/portfolio.png";
+import portfolioimg from "./static/download.png";
 import newsAPIimg from "./static/newsAPI.webp";
 import organoimg from "./static/organo.png";
 import ecommimg from "./static/ecomm.webp";
-import rnnimg from "./static/rnn.png";
+import rnnimg from "./static/rnn.jpeg";
 
 const projects = [
+
   {
-    title: "MeteoroRNN",
+    title: "E-commerce Microservices",
     description:
-      "A machine learning project that uses a Recurrent Neural Network (RNN) to predict urban temperatures from historical weather data, learning temporal dependencies for accurate forecasting.",
-    imageUrl: rnnimg,
-    githubUrl: "https://github.com/Saketh-09/MeteoroRNN",
+      "A scalable e-commerce platform using microservices architecture with Next.js, Nest.js, MySQL, and Stripe API. Containerized with Docker and orchestrated via Kubernetes.",
+    imageUrl: ecommimg,
+    githubUrl: "https://github.com/Saketh-09/event-driven-ecommerce",
   },
   {
     title: "Personal Website",
@@ -139,18 +140,18 @@ const projects = [
     githubUrl: "https://github.com/Saketh-09/1",
   },
   {
-    title: "E-commerce Microservices",
-    description:
-      "A scalable e-commerce platform using microservices architecture with Next.js, Nest.js, MySQL, and Stripe API. Containerized with Docker and orchestrated via Kubernetes.",
-    imageUrl: ecommimg,
-    githubUrl: "https://github.com/Saketh-09/event-driven-ecommerce",
-  },
-  {
     title: "NewsAPI ELK Pipeline",
     description:
       "A real-time data pipeline that processes news data using PySpark Structured Streaming and Apache Kafka for Named Entity Recognition, with insights visualized via the ELK stack.",
     imageUrl: newsAPIimg,
     githubUrl: "https://github.com/Saketh-09/newAPI-ELK",
+  },
+  {
+    title: "MeteoroRNN",
+    description:
+      "A machine learning project that uses a Recurrent Neural Network (RNN) to predict urban temperatures from historical weather data, learning temporal dependencies for accurate forecasting.",
+    imageUrl: rnnimg,
+    githubUrl: "https://github.com/Saketh-09/MeteoroRNN",
   },
 ];
 
@@ -174,7 +175,8 @@ function ProjectsPage() {
                 flexDirection: "column",
                 transition: "transform 0.3s, box-shadow 0.3s",
                 "&:hover": { transform: "translateY(-8px)", boxShadow: 6 },
-                background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.3) 0%, hsla(186, 100%, 69%, 0.3) 100%)"
+                background:
+                  "linear-gradient(90deg, hsla(152, 100%, 50%, 0.3) 0%, hsla(186, 100%, 69%, 0.3) 100%)",
               }}
             >
               <CardMedia

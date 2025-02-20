@@ -14,7 +14,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#f2f2f2]">
+    <div className="relative min-h-screen back">
       {/* Background with gradient and blur */}
       {/* Main content */}
       <CssBaseline />

@@ -411,7 +411,12 @@ export default function HomeContent() {
         <Grid item xs={12} md={6}>
           {/* About / Summary Card */}
           <Card
-            sx={{ mb: 4, boxShadow: 3, background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.5) 0%, hsla(186, 100%, 69%, 0.5) 100%)"}}
+            sx={{
+              mb: 4,
+              boxShadow: 3,
+              background:
+                "linear-gradient(90deg, hsla(152, 100%, 50%, 0.4) 0%, hsla(186, 100%, 69%, 0.3) 100%)",
+            }}
             className="home-card"
           >
             <CardContent>
@@ -425,7 +430,14 @@ export default function HomeContent() {
           </Card>
 
           {/* Education Card */}
-          <Card sx={{ mb: 4, boxShadow: 3, background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.5) 0%, hsla(186, 100%, 69%, 0.5) 100%)" }}>
+          <Card
+            sx={{
+              mb: 4,
+              boxShadow: 3,
+              background:
+                "linear-gradient(90deg, hsla(152, 100%, 50%, 0.4) 0%, hsla(186, 100%, 69%, 0.3) 100%)",
+            }}
+          >
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 <SchoolIcon sx={{ verticalAlign: "middle", mr: 1 }} />
@@ -445,7 +457,14 @@ export default function HomeContent() {
           </Card>
 
           {/* Tech Stacks Card */}
-          <Card sx={{ mb: 4, boxShadow: 3, background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.5) 0%, hsla(186, 100%, 69%, 0.5) 100%)" }}>
+          <Card
+            sx={{
+              mb: 4,
+              boxShadow: 3,
+              background:
+                "linear-gradient(90deg, hsla(152, 100%, 50%, 0.4) 0%, hsla(186, 100%, 69%, 0.3) 100%)",
+            }}
+          >
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 Technical Skills
@@ -477,11 +496,18 @@ export default function HomeContent() {
         {/* Right Column: Experience, Projects, Contact */}
         <Grid item xs={12} md={6}>
           {/* Experience Card */}
-          <Card sx={{ mb: 4, boxShadow: 3, background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.5) 0%, hsla(186, 100%, 69%, 0.5) 100%)" }}>
+          <Card
+            sx={{
+              mb: 4,
+              boxShadow: 3,
+              background:
+                "linear-gradient(90deg, hsla(152, 100%, 50%, 0.4) 0%, hsla(186, 100%, 69%, 0.3) 100%)",
+            }}
+          >
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 <WorkIcon sx={{ verticalAlign: "middle", mr: 1 }} />
-                Professional Experience
+                Professional Highlights
               </Typography>
               {resumeContent.experience.map((exp, idx) => (
                 <Box key={idx} sx={{ mb: 2 }}>
