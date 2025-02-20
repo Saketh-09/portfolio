@@ -1,33 +1,41 @@
-import * as React from "react";
+// import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { Grid, Paper, Typography } from "@mui/material";
-import { grey } from "@mui/material/colors";
+import { Typography, Paper, Avatar } from "@mui/material";
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineOppositeContent,
+} from "@mui/lab";
+import AnimatedTitle from "../animated/animsted-text";
 import styles from "./experience.module.css";
 import { name, location, role, dates, projects } from "./expData";
-import AnimatedTitle from "../animated/animsted-text";
-export default function Experience() {
-  const beehyvKeys = Object.keys(projects.beehyv);
-  const newAgeKeys = Object.keys(projects.newage);
-  const utdKeys = Object.keys(projects.utd);
 
-  const renderPoints = (keys, data) => {
-    return keys.map((key) => (
-      <div key={key}>
-        <Typography
-          variant="h6"
-          className={styles.cgpa}
-          sx={{ fontWeight: 350 }}
-        >
-          {key}
+const ExperienceTimelineItem = ({
+  logo,
+  name,
+  location,
+  role,
+  dates,
+  projects,
+  index,
+  isLast,
+}) => {
+  // Helper to render project details as bullet points
+  const renderProjects = (projects) => {
+    return Object.keys(projects).map((projectKey) => (
+      <div key={projectKey} style={{ marginTop: "8px" }}>
+        <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
+          {projectKey}
         </Typography>
-        <ul class="space-y-1 text-gray-500 dark:text-gray-700 list-disc">
-          {data[key].map((point, index) => (
-            <li key={index}>
-              <Typography variant="body1" className={styles.cgpa}>
-                {point}
-              </Typography>
+        <ul style={{ marginLeft: "20px", listStyleType: "disc" }}>
+          {projects[projectKey].map((point, idx) => (
+            <li key={idx}>
+              <Typography variant="body2">{point}</Typography>
             </li>
           ))}
         </ul>
@@ -36,210 +44,108 @@ export default function Experience() {
   };
 
   return (
-    <div id="education" className="m-4 sm:m-14">
-      <Typography
-        variant="h3"
-        className={styles.education}
-        sx={{ fontWeight: 300, letterSpacing: 4 }}
-      >
-        <AnimatedTitle text="EXPERIENCE" />
-      </Typography>
+    <TimelineItem>
+      {/* Left Side: Dates */}
+      <TimelineOppositeContent style={{ flex: 0.1 }}>
+        <Typography variant="body2" color="textSecondary">
+          {dates}
+        </Typography>
+      </TimelineOppositeContent>
+
+      {/* Middle: Icon and Connector */}
+      <TimelineSeparator>
+        <TimelineDot>
+          <Avatar
+            src={process.env.PUBLIC_URL + logo}
+            sx={{ width: 50, height: 50 }}
+          />
+        </TimelineDot>
+        {!isLast && <TimelineConnector />}
+      </TimelineSeparator>
+
+      {/* Right Side: Experience Details */}
+      <TimelineContent>
+        <Paper
+          elevation={1}
+          sx={{
+            padding: "10px",
+            background: "inherit",
+            borderRadius: "16px",
+            background: "linear-gradient(90deg, hsla(152, 100%, 50%, 0.3) 0%, hsla(186, 100%, 69%, 0.3) 100%)"
+          }}
+        >
+          <Typography variant="h6" sx={{ fontWeight: 350 }}>
+            {name}
+          </Typography>
+          <Typography variant="caption">{location}</Typography>
+          <Typography variant="subtitle1" sx={{ fontWeight: 400 }}>
+            {role}
+          </Typography>
+          {renderProjects(projects)}
+        </Paper>
+      </TimelineContent>
+    </TimelineItem>
+  );
+};
+
+export default function Experience() {
+  // Build an array of experience items.
+  const experiences = [
+    {
+      logo: "/assets/beehyvLogo2.png",
+      name: name.beehyv2,
+      location: location.beehyv2,
+      role: role.beehyv2,
+      dates: dates.beehyv2,
+      projects: projects.beehyv2,
+    },
+    {
+      logo: "/assets/utdLogo2.png",
+      name: name.utd,
+      location: location.utd,
+      role: role.utd,
+      dates: dates.utd,
+      projects: projects.utd,
+    },
+    {
+      logo: "/assets/beehyvLogo2.png",
+      name: name.beehyv,
+      location: location.beehyv,
+      role: role.beehyv,
+      dates: dates.beehyv,
+      projects: projects.beehyv,
+    },
+    {
+      logo: "/assets/newageitLogo.jpeg",
+      name: name.newage,
+      location: location.newage,
+      role: role.newage,
+      dates: dates.newage,
+      projects: projects.newage,
+    },
+  ];
+
+  return (
+    <div id="experience" className="m-4 sm:m-14">
       <CssBaseline />
       <Container maxWidth="lg">
-        <Box sx={{ borderRadius: 1, borderBlockColor: grey }}>
-          <Grid container spacing={2}>
-            <Grid item lg={2} xs={12}>
-              <Paper elevation={0} sx={{ background: "inherit" }}>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/beehyvLogo.svg"}
-                  alt="utd logo"
-                  className={styles.logo}
-                />
-              </Paper>
-            </Grid>
-            <Grid item lg={10} xs={12}>
-              <Paper
-                elevation={0}
-                sx={{ marginLeft: { sm: "3em" }, background: "inherit" }}
-              >
-                <Typography variant="h6" className={styles.education}>
-                  {name.beehyv2}
-                </Typography>
-                <Typography
-                  className={styles.location}
-                  variant="caption"
-                  display="block"
-                >
-                  {location.beehyv2}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  className={styles.course}
-                  sx={{ fontWeight: 400 }}
-                >
-                  {role.beehyv2}
-                </Typography>
-                <Typography
-                  className={styles.dates}
-                  variant="caption"
-                  display="block"
-                >
-                  {dates.beehyv2}
-                </Typography>
-                <div>{renderPoints(utdKeys, projects.beehyv2)}</div>
-                <br />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Box>
-        <hr className={styles.hr} />
-      </Container>
-      <Container maxWidth="lg">
-        <Box sx={{ borderRadius: 1, borderBlockColor: grey }}>
-          <Grid container spacing={2}>
-            <Grid item lg={2} xs={12}>
-              <Paper elevation={0} sx={{ background: "inherit" }}>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/utdLogo.png"}
-                  alt="utd logo"
-                  className={styles.logo}
-                />
-              </Paper>
-            </Grid>
-            <Grid item lg={10} xs={12}>
-              <Paper
-                elevation={0}
-                sx={{ marginLeft: { sm: "3em" }, background: "inherit" }}
-              >
-                <Typography variant="h6" className={styles.education}>
-                  {name.utd}
-                </Typography>
-                <Typography
-                  className={styles.location}
-                  variant="caption"
-                  display="block"
-                >
-                  {location.utd}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  className={styles.course}
-                  sx={{ fontWeight: 400 }}
-                >
-                  {role.utd}
-                </Typography>
-                <Typography
-                  className={styles.dates}
-                  variant="caption"
-                  display="block"
-                >
-                  {dates.utd}
-                </Typography>
-                <div>{renderPoints(utdKeys, projects.utd)}</div>
-                <br />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Box>
-        <hr className={styles.hr} />
-      </Container>
-      <Container maxWidth="lg">
-        <Box sx={{ borderRadius: 1, borderBlockColor: grey }}>
-          <Grid container spacing={2}>
-            <Grid item lg={2} xs={12}>
-              <Paper elevation={0} sx={{ background: "inherit" }}>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/beehyvLogo.svg"}
-                  alt="utd logo"
-                  className={styles.logo}
-                />
-              </Paper>
-            </Grid>
-            <Grid item lg={10} xs={12}>
-              <Paper
-                elevation={0}
-                sx={{ marginLeft: { sm: "3em" }, background: "inherit" }}
-              >
-                <Typography variant="h6" className={styles.education}>
-                  {name.beehyv}
-                </Typography>
-                <Typography
-                  className={styles.location}
-                  variant="caption"
-                  display="block"
-                >
-                  {location.beehyv}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  className={styles.course}
-                  sx={{ fontWeight: 400 }}
-                >
-                  {role.beehyv}
-                </Typography>
-                <Typography
-                  className={styles.dates}
-                  variant="caption"
-                  display="block"
-                >
-                  {dates.beehyv}
-                </Typography>
-                <div>{renderPoints(beehyvKeys, projects.beehyv)}</div>
-                <br />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Box>
-        <hr className={styles.hr} />
-      </Container>
-      <Container maxWidth="lg">
-        <Box sx={{ borderRadius: 1, borderBlockColor: grey }}>
-          <Grid container spacing={2}>
-            <Grid item lg={2} xs={12}>
-              <Paper elevation={0} sx={{ background: "inherit" }}>
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/newageitLogo.jpeg"}
-                  alt="utd logo"
-                  className={styles.logo}
-                />
-              </Paper>
-            </Grid>
-            <Grid item lg={10} xs={12}>
-              <Paper
-                elevation={0}
-                sx={{ marginLeft: { sm: "3em" }, background: "inherit" }}
-              >
-                <Typography variant="h6" className={styles.education}>
-                  {name.newage}
-                </Typography>
-                <Typography
-                  className={styles.location}
-                  variant="caption"
-                  display="block"
-                >
-                  {location.newage}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  className={styles.course}
-                  sx={{ fontWeight: 400 }}
-                >
-                  {role.newage}
-                </Typography>
-                <Typography
-                  className={styles.dates}
-                  variant="caption"
-                  display="block"
-                >
-                  {dates.newage}
-                </Typography>
-                <div>{renderPoints(newAgeKeys, projects.newage)}</div>
-                <br />
-              </Paper>
-            </Grid>
-          </Grid>
-        </Box>
-        <hr className={styles.hr} />
+        <Typography
+          variant="h3"
+          className={styles.education}
+          sx={{ fontWeight: 300, letterSpacing: 4, color: "#000064" }}
+        >
+          <AnimatedTitle text="EXPERIENCE" />
+        </Typography>
+        <Timeline align="alternate">
+          {experiences.map((item, index) => (
+            <ExperienceTimelineItem
+              key={index}
+              {...item}
+              index={index}
+              isLast={index === experiences.length - 1}
+            />
+          ))}
+        </Timeline>
       </Container>
     </div>
   );

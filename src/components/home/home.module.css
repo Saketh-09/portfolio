@@ -15,8 +15,17 @@
 }
 
 .name {
-  color: rgb(249 246 252);
+  color: #91a4e4;
 }
 .content {
   color: rgb(77 62 62);
+}
+
+.home-card {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }

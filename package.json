@@ -4,19 +4,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
+    "@chakra-ui/react": "^3.8.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.0.8",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
     "@mui/icons-material": "^5.15.1",
-    "@mui/material": "^5.15.1",
+    "@mui/lab": "^6.0.0-beta.27",
+    "@mui/material": "^6.4.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.13.1",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
@@ -30,7 +33,8 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "shadcn": "shadcn-ui"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +58,7 @@
     "autoprefixer": "^10.4.20",
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.45",
+    "shadcn-ui": "^0.9.4",
     "tailwindcss": "^3.4.11"
   }
 }
